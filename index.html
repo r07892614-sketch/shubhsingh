@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SHUBH SINGH 2019 – Join Channel</title>
+  <style>
+    :root{
+      --bg:#0f172a;          /* dark navy */
+      --card:#0b1220;        /* card dark */
+      --accent1:#ff6b6b;     /* coral red */
+      --accent2:#ffd166;     /* warm yellow */
+      --muted:#94a3b8;       /* muted text */
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Arial;}
+    body{
+      min-height:100vh;
+      background:linear-gradient(180deg,var(--bg),#071028 70%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      color:var(--white);
+    }
+
+    .wrap{
+      width:100%;
+      max-width:440px;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.04);
+      border-radius:16px;
+      padding:22px;
+      box-shadow:0 10px 30px rgba(2,6,23,0.7), 0 0 40px rgba(255,107,107,0.06);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+    }
+
+    /* Top badge */
+    .badge{
+      font-size:12px;
+      letter-spacing:0.14em;
+      text-transform:uppercase;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,209,102,0.08);
+      color:var(--accent2);
+      border:1px solid rgba(255,209,102,0.12);
+    }
+
+    /* Logo circle */
+    .logo-outer{
+      width:140px;height:140px;border-radius:50%;
+      background:conic-gradient(from 0deg,var(--accent1),#f97316,var(--accent2),var(--accent1));
+      padding:4px;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 8px 30px rgba(255,107,107,0.12);
+      animation:spin 14s linear infinite;
+    }
+    @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+    .logo-inner{width:100%;height:100%;border-radius:50%;background:var(--card);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+    .logo-inner img{width:86%;height:86%;object-fit:cover;border-radius:50%}
+    .logo-inner:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 25%, rgba(255,255,255,0.06), transparent 45%)}
+
+    /* Title/subs */
+    .title{font-weight:800;font-size:1.05rem;text-align:center;letter-spacing:0.02em}
+    .subs{font-size:0.9rem;color:var(--muted);text-align:center}
+
+    /* info */
+    .info{width:100%;background:rgba(255,255,255,0.02);border-radius:12px;padding:10px 12px;color:var(--muted);font-size:0.9rem;line-height:1.45}
+    .info strong{color:var(--accent2);font-weight:700}
+
+    .divider{width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);margin:8px 0}
+
+    /* timer */
+    .timer-label{font-size:11px;text-transform:uppercase;color:var(--muted);letter-spacing:0.12em}
+    .timer{
+      margin-top:6px;
+      padding:8px 16px;border-radius:999px;background:rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.03);font-weight:700;font-variant-numeric:tabular-nums;
+    }
+
+    /* Big highlighted button (prominent) */
+    .cta-wrap{width:100%;display:flex;justify-content:center;margin-top:8px}
+    .cta{
+      width:92%;
+      max-width:360px;
+      padding:16px 18px;
+      border-radius:12px;
+      font-weight:800;
+      font-size:1.02rem;
+      text-transform:uppercase;
+      letter-spacing:0.06em;
+      border:none;cursor:pointer;
+      color:var(--bg);
+      background:linear-gradient(90deg,var(--accent2),#ffd89b 45%,var(--accent1));
+      box-shadow:0 10px 30px rgba(255,209,102,0.12), 0 6px 18px rgba(255,107,107,0.12);
+      position:relative;overflow:hidden;
+      animation:pulse 2.6s ease-in-out infinite;
+    }
+    @keyframes pulse{
+      0%{transform:translateY(0);opacity:0.88}
+      50%{transform:translateY(-3px);opacity:1}
+      100%{transform:translateY(0);opacity:0.88}
+    }
+    .cta::before{
+      content:"";position:absolute;top:-40%;left:-20%;width:34%;height:180%;
+      background:linear-gradient(120deg,rgba(255,255,255,0.12),rgba(255,255,255,0.9),rgba(255,255,255,0.12));
+      transform:translateX(-150%) rotate(18deg);
+      animation:shine 2.2s ease-in-out infinite;pointer-events:none;
+    }
+    @keyframes shine{
+      0%{transform:translateX(-150%) rotate(18deg)}
+      55%{transform:translateX(150%) rotate(18deg)}
+      100%{transform:translateX(150%) rotate(18deg)}
+    }
+    .cta.disabled{background:linear-gradient(90deg,#9ca3af,#b6bfc9);cursor:not-allowed;animation:none;box-shadow:none;color:#111}
+
+    /* footer small note */
+    .note{font-size:0.85rem;color:var(--muted);text-align:center;margin-top:8px}
+
+    /* responsiveness */
+    @media (max-width:420px){
+      .logo-outer{width:120px;height:120px}
+      .cta{padding:14px;font-size:0.98rem;border-radius:999px}
+      .card{padding:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="SHUBH SINGH 2019 join card">
+      <div class="badge">Official Channel</div>
+
+      <div class="logo-outer" aria-hidden="true">
+        <div class="logo-inner">
+          <!-- replace with your logo image -->
+          <img src="logo.jpg" alt="SHUBH SINGH 2019 logo" />
+        </div>
+      </div>
+
+      <div class="title">SHUBH SINGH 2019</div>
+      <div class="subs">72 192 subscribers</div>
+
+      <div class="info" aria-live="polite">
+        🚩 Har har Mahadev 🚩<br>
+        Reddy888 Telegram👇🏻<br>
+        Best Betting Site👇🏻
+      </div>
+
+      <div class="cta-wrap">
+        <button id="joinBtn" class="cta" type="button" aria-label="Free join to SHUBH SINGH 2019 channel">
+          ▶︎ FREE JOIN
+        </button>
+      </div>
+
+      <div class="divider" role="presentation"></div>
+
+      <div class="timer-label">Link active for</div>
+      <div id="timer" class="timer">00:60</div>
+
+      <div class="note">Tap <strong>FREE JOIN</strong> to open Telegram and join instantly.</div>
+    </div>
+  </div>
+
+  <script>
+    // 60-second countdown + redirect on click
+    (function(){
+      let seconds = 60;
+      const timerEl = document.getElementById('timer');
+      const btn = document.getElementById('joinBtn');
+      const telegramUrl = "https://t.me/+sVQezrQnX7pmMzE1"; // <-- replace with real link
+
+      function tick(){
+        const s = seconds < 10 ? '0' + seconds : seconds;
+        timerEl.textContent = '00:' + s;
+        if(seconds <= 0){
+          clearInterval(interval);
+          timerEl.textContent = '00:00';
+          btn.classList.add('disabled');
+          btn.disabled = true;
+          btn.textContent = 'TIME EXPIRED';
+        }
+        seconds--;
+      }
+
+      const interval = setInterval(tick,1000);
+      tick(); // initial
+
+      btn.addEventListener('click', function(){
+        if(btn.disabled) return;
+        // direct redirect (no popup) as requested
+        window.location.href = telegramUrl;
+      }, {passive:true});
+    })();
+  </script>
+</body>
+</html>
